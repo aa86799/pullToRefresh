@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stone.pulltorefresh" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".application.StoneApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+        <activity android:name=".LauncherActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PullToRefreshExpandableListActivity" />
+        <activity android:name=".PullToRefreshGridActivity" />
+        <activity android:name=".PullToRefreshHorizontalScrollViewActivity" />
+        <activity android:name=".PullToRefreshListActivity" />
+        <activity android:name=".PullToRefreshListFragmentActivity" />
+        <activity android:name=".PullToRefreshListInViewPagerActivity" />
+        <activity android:name=".PullToRefreshScrollViewActivity" />
+        <activity android:name=".PullToRefreshViewPagerActivity" />
+        <activity android:name=".PullToRefreshWebView2Activity" />
+        <activity android:name=".PullToRefreshWebViewActivity" />
+        <activity
+            android:name=".MyLvPullPhotoActivity"
+            android:label="@string/title_activity_my_lv_pull_photo" >
+        </activity>
+    </application>
+
+</manifest>
