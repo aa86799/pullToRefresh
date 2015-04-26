@@ -10,9 +10,9 @@ import java.util.List;
  *
  * 常量
  */
-public class Constants {
+public class FinalValue {
 
-    private static final String qiniu_img_url = "http://7xi8ex.com1.z0.glb.clouddn.com/fengjing/";
+    private static final String qiniu_img_url = "http://xxxx";
 
     public static List<String> getImgUrls() {
         List<String> list = new ArrayList<String>();
@@ -23,6 +23,6 @@ public class Constants {
     }
 
     public static class Config {
-        public static final boolean DEVELOPER_MODE = true;
+        public static final boolean DEVELOPER_MODE = false;
     }
 }

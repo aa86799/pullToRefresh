@@ -15,7 +15,7 @@ import com.handmark.pulltorefresh.library.extras.SoundPullEventListener;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.stone.pulltorefresh.adapter.ImgAdapter;
 import com.stone.pulltorefresh.model.Photo;
-import com.stone.pulltorefresh.util.Constants;
+import com.stone.pulltorefresh.util.FinalValue;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -41,7 +41,7 @@ public class MyLvPullPhotoActivity extends Activity {
         setContentView(R.layout.activity_my_lv_pull_photo);
 
         mPhotoList = new LinkedList<Photo>();
-        mUrlList = Constants.getImgUrls();
+        mUrlList = FinalValue.getImgUrls();
         loadPhotosData(++mPageNum);
 
         mPullRefreshListView = (PullToRefreshListView) findViewById(R.id.pull_refresh_list);

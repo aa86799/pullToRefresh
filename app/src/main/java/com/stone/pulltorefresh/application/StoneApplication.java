@@ -12,7 +12,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-import com.stone.pulltorefresh.util.Constants;
+import com.stone.pulltorefresh.util.FinalValue;
 
 /**
  * author : stone
@@ -24,7 +24,7 @@ public class StoneApplication extends Application {
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     @Override
     public void onCreate() {
-        if (Constants.Config.DEVELOPER_MODE && Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+        if (FinalValue.Config.DEVELOPER_MODE && Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectAll().penaltyDialog().build());
             StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectAll().penaltyDeath().build());
         }
@@ -49,7 +49,7 @@ public class StoneApplication extends Application {
         config.tasksProcessingOrder(QueueProcessingType.FIFO);//任务队列处理规则：LIFO、FIFO
         config.defaultDisplayImageOptions(DisplayImageOptions.createSimple());//加载图片的选项
 
-        if (Constants.Config.DEVELOPER_MODE) {
+        if (FinalValue.Config.DEVELOPER_MODE) {
             config.writeDebugLogs(); // Remove for release app
         }
 
