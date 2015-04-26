@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class FinalValue {
 
-    private static final String qiniu_img_url = "http://xxxx";
+    private static final String qiniu_img_url = "http://7xi8ex.com1.z0.glb.clouddn.com/fengjing/";
 
     public static List<String> getImgUrls() {
         List<String> list = new ArrayList<String>();
